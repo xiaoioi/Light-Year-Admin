@@ -402,6 +402,9 @@ i {
 .alert .alert-link:hover {
     text-decoration: underline;
 }
+.alert p:last-child {
+    margin-bottom: 0px;
+}
 
 /* 按钮 */
 .btn {
