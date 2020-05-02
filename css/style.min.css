@@ -348,6 +348,9 @@ i {
 .no-underline:focus {
     text-decoration:none;
 }
+hr {
+    border-color: rgba(77, 82, 89, 0.05);
+}
 
 /** ----------------------------------
  * 重置样式
@@ -1349,11 +1352,24 @@ i {
     -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.075);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.075);
 }
-.dropdown-item {
+.dropdown-item,
+.dropdown-header,
+.dropdown-item-text {
     padding: 8px 15px;
 }
 .dropdown-item .mdi {
     vertical-align: text-top;
+}
+.dropleft .dropdown-toggle::before {
+    vertical-align: 1px;
+}
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: #f9fafb;
+}
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: #33cabb;
 }
 
 /* 标签页 */
@@ -1744,6 +1760,121 @@ a.text-warning:hover,a.text-warning:focus {
 }
 a.text-danger:hover,a.text-danger:focus {
 	color: #f96868 !important
+}
+
+/* 徽章 */
+.badge {
+    -weikit-border-radius: 2px;
+    border-radius: 2px;
+    font-weight: 300;
+}
+.badge-pill {
+    -weikit-border-radius: 10rem;
+    border-radius: 10rem;
+}
+.badge-primary {
+    background-color: #33cabb;
+}
+a.badge-primary:hover,
+a.badge-primary:focus {
+    background-color: #52d3c7;
+}
+.badge-success {
+    background-color: #15c377;
+}
+a.badge-success:hover,
+a.badge-success:focus {
+    background-color: #16d17f;
+}
+.badge-info {
+    background-color: #48b0f7;
+}
+a.badge-info:hover,
+a.badge-info:focus {
+    background-color: #65bdf8;
+}
+.badge-warning {
+    background-color: #faa64b;
+}
+a.badge-warning:hover,
+a.badge-warning:focus {
+    background-color: #fbb264;
+}
+.badge-danger {
+    background-color: #f96868;
+}
+a.badge-danger:hover,
+a.badge-danger:focus {
+    background-color: #fa8181;
+}
+.badge-dark {
+    background-color: #465161;
+}
+a.badge-dark:hover,
+a.badge-dark:focus {
+    background-color: #515d70;
+}
+.badge-secondary {
+    background-color: #e4e7ea;
+    color: #4d5259;
+}
+a.badge-secondary:hover,
+a.badge-secondary:focus {
+    color: #4d5259;
+    background-color: #edeff1;
+}
+.badge-purple {
+    background-color: #926dde;
+    color: #fff;
+}
+a.badge-purple:hover,
+a.badge-purple:focus {
+    color: #fff;
+    background-color: #a282e3;
+}
+.badge-pink {
+    background-color: #f96197;
+    color: #fff;
+}
+a.badge-pink:hover,
+a.badge-pink:focus {
+    color: #fff;
+    background-color: #fa75a4;
+}
+.badge-cyan {
+    background-color: #57c7d4;
+    color: #fff;
+}
+a.badge-cyan:hover,
+a.badge-cyan:focus {
+    color: #fff;
+    background-color: #77d2dc;
+}
+.badge-yellow {
+    background-color: #fcc525;
+    color: #fff;
+}
+a.badge-yellow:hover,
+a.badge-yellow:focus {
+    color: #fff;
+    background-color: #fdd04d;
+}
+.badge-brown {
+    background-color: #8d6658;
+    color: #fff;
+}
+a.badge-brown:hover,
+a.badge-brown:focus {
+    color: #fff;
+    background-color: #9d7162;
+}
+a.badge-light:hover,
+a.badge-light:focus {
+    background-color: #F3F4F6;
+}
+a.badge:focus,
+a.badge.focus {
+    box-shadow: none;
 }
 
 /* 其他 */

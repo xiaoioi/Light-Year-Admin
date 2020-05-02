@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>表单 - 光年(Light Year Admin)后台管理系统模板</title>
+<link rel="icon" href="favicon.ico" type="image/ico">
+<meta name="keywords" content="LightYear,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="LightYear是一个基于Bootstrap v4.4.1的后台管理系统的HTML模板。">
+<meta name="author" content="yinqi">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/materialdesignicons.min.css" rel="stylesheet">
+<link href="css/style.min.css" rel="stylesheet">
+</head>
+  
+<body>
+<div class="container-fluid p-t-15">
+  
+  <div class="row">
+    
+    
+    <div class="col-md-6">
+      <div class="card">
+        <header class="card-header"><div class="card-title">基本样式</div></header>
+        <div class="card-body">
+          
+          <form class="form-horizontal" action="#" method="post" enctype="multipart/form-data" onsubmit="return false;">
+            <div class="form-group">
+              <label for="exampleFormControlInput1">邮箱地址</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="请输入邮箱地址">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">下拉选择</label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option>侦骑四出</option>
+                <option>追踪神秘客</option>
+                <option>突遭暗算</option>
+                <option>冒险探桃源</option>
+                <option>一场豪赌</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect2">多选示例</label>
+              <select multiple class="form-control" id="exampleFormControlSelect2">
+                <option>神秘地穴</option>
+                <option>前因后果</option>
+                <option>美人青睐</option>
+                <option>几乎见龙王</option>
+                <option>惊散野鸳鸯</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">文本域</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="内容"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlFile1">上传控件</label>
+              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            </div>
+            <div class="form-group">
+              <label for="readOnlyExample">只读</label>
+              <input class="form-control" id="readOnlyExample" type="text" placeholder="此处为只读输入框..." readonly>
+            </div>
+            <div class="form-group">
+              <label for="readOnlyExample">只读纯文本</label>
+              <input class="form-control-plaintext" id="readOnlyExample" type="text" placeholder="此处为只读输入框..." readonly value="email@example.com">
+            </div>
+            <div class="form-group">
+              <label for="formControlRange">范围输入</label>
+              <input type="range" class="form-control-range" id="formControlRange" />
+            </div>
+            <div class="form-group">
+              <h6>多选框</h6>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                  篮球
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+                <label class="form-check-label" for="defaultCheck2">
+                  足球
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                <label class="form-check-label" for="inlineCheckbox1">1</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                <label class="form-check-label" for="inlineCheckbox2">2</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+                <label class="form-check-label" for="inlineCheckbox3">3 (禁用)</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <h6>单选框</h6>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                <label class="form-check-label" for="exampleRadios1">
+                  排球
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                <label class="form-check-label" for="exampleRadios2">
+                  乒乓球
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+                <label class="form-check-label" for="exampleRadios3">
+                  棒球
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+             <div class="form-check form-check-inline">
+               <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+               <label class="form-check-label" for="inlineRadio1">1</label>
+             </div>
+             <div class="form-check form-check-inline">
+               <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+               <label class="form-check-label" for="inlineRadio2">2</label>
+             </div>
+             <div class="form-check form-check-inline">
+               <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+               <label class="form-check-label" for="inlineRadio3">3 (禁用)</label>
+             </div>
+            </div>
+            <div class="form-group">
+              <h6>不使用 <code>label</code> 标签</h6>
+              <div class="form-check">
+                <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+              </div>
+              <div class="form-check">
+                <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+              </div>
+            </div>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6">
+    </div>
+     
+  </div>
+  
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/popper.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/main.min.js"></script>
+</body>
+</html>
