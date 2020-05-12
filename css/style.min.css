@@ -22,15 +22,11 @@ a {
 	transition: .3s linear
 }
 a:hover,
-a:focus {
-	color: #4d5259;
-	text-decoration: none;
-	outline: none
-}
-a:hover,
 a:focus,
 a:active {
-    text-decoration: none;
+	color: #1c7068;
+	text-decoration: none;
+	outline: none
 }
 a,
 button,
@@ -87,8 +83,8 @@ i.mdi:after {
 .border-example-row .row>[class^=col-] {
     padding-top: .75rem;
     padding-bottom: .75rem;
-    background-color: rgba(86,61,124,.15);
-    border: 1px solid rgba(86,61,124,.2);
+    background-color: rgba(86, 61, 124, .15);
+    border: 1px solid rgba(86, 61, 124, .2);
 }
 .border-example-row .row+.row {
     margin-top: 1rem;
@@ -119,15 +115,31 @@ i.mdi:after {
     height: 350px;
     overflow: auto;
 }
-.bd-example-toasts {
+.border-example-toasts {
     background: #F8F9FA;
     padding: 15px;
     margin-bottom: 15px;
+}
+.border-example-border-utils [class^=border] {
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    margin: .25rem;
+    background-color: #F8F9FA;
+}
+.border-example-border-utils-0 [class^=border] {
+    border: 1px solid #dee2e6;
+}
+.border-highlight {
+    background-color: rgba(86,61,124,.15);
+    border: 1px solid rgba(86,61,124,.15);
 }
 
 /** ----------------------------------
  * 通用辅助类
  -------------------------------------- */
+/* 边框 */
+
 /* 布局 */
 .flex-box {
     display: -webkit-box;
@@ -537,6 +549,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-bottom: 0px;
 }
 .alert-primary {
+    color: #1c7068;
     background-color: #d5f5f3;
 }
 .alert-secondary {
@@ -559,6 +572,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 .alert-dark {
     background-color: #d6d8d9;
+}
+
+/* toast */
+.toast {
+    border-color: rgba(77, 82, 89, 0.07);
+    box-shadow: 0 0.125rem 0.75rem rgba(0, 0, 0, .035);
 }
 
 /* 按钮 */
@@ -1499,6 +1518,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     -webkit-transition: 0.2s linear;
     transition: 0.2s linear;
 }
+.form-control:focus {
+    border-color: #33cabb;
+    box-shadow: 0 0 0 0.2rem rgba(51, 202, 187, 0.25);
+}
 .form-control-lg {
     font-size: 1.25rem;
 }
@@ -1516,14 +1539,374 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     border-color: #F2F3F3;/*rgba(77, 82, 89, 0.07);*/
 }
 
-/* 单选框 */
-.custom-control {
-    padding-left: 24px;
+/* 自定义表单样式 */
+.custom-control-label::before {
+    border-color: #ebebeb;
+}
+.custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem rgba(51, 202, 187, 0.25);
+}
+.custom-control-input:checked~.custom-control-label::before {
+    background-color: #33cabb;
+    border-color: #33cabb;
+}
+.custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: #33cabb;
+}
+.custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+    background-color: #33cabb;
+    border-color: #33cabb;
+}
+.custom-control-input:disabled~.custom-control-label::before,
+.custom-control-input[disabled]~.custom-control-label::before {
+    background-color: #ebebeb;
+}
+
+/* 单选框 & 开关 */
+.custom-secondary .custom-control-input:checked~.custom-control-label::before {
+    border-color: #e4e7ea;
+    background-color: #e4e7ea;
+}
+.custom-secondary .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem rgba(228, 231, 234, 0.25);
+}
+.custom-success .custom-control-input:checked~.custom-control-label::before {
+    border-color: #15c377;
+    background-color: #15c377;
+}
+.custom-success .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem rgba(21, 195, 119, 0.25);
+}
+.custom-info .custom-control-input:checked~.custom-control-label::before {
+    border-color: #48b0f7;
+    background-color: #48b0f7;
+}
+.custom-info .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem rgba(72, 176, 247, 0.25);
+}
+.custom-warning .custom-control-input:checked~.custom-control-label::before {
+    border-color: #faa64b;
+    background-color: #faa64b;
+}
+.custom-warning .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem rgba(250, 166, 75, 0.25);
+}
+.custom-danger .custom-control-input:checked~.custom-control-label::before {
+    border-color: #f96868;
+    background-color: #f96868;
+}
+.custom-danger .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem rgba(249, 104, 104, 0.25);
+}
+.custom-pink .custom-control-input:checked~.custom-control-label::before {
+    border-color: #f96197;
+    background-color: #f96197;
+}
+.custom-pink .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem rgba(249, 97, 151, 0.25);
+}
+.custom-purple .custom-control-input:checked~.custom-control-label::before {
+    border-color: #926dde;
+    background-color: #926dde;
+}
+.custom-purple .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem rgba(146, 109, 222, 0.25);
+}
+.custom-brown .custom-control-input:checked~.custom-control-label::before {
+    border-color: #8d6658;
+    background-color: #8d6658;
+}
+.custom-brown .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem rgba(141, 102, 88, 0.25);
+}
+.custom-cyan .custom-control-input:checked~.custom-control-label::before {
+    border-color: #57c7d4;
+    background-color: #57c7d4;
+}
+.custom-cyan .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem rgba(87, 199, 212, 0.25);
+}
+.custom-yellow .custom-control-input:checked~.custom-control-label::before {
+    border-color: #fcc525;
+    background-color: #fcc525;
+}
+.custom-yellow .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem rgba(252, 197, 37, 0.25);
+}
+.custom-gray .custom-control-input:checked~.custom-control-label::before {
+    border-color: #868e96;
+    background-color: #868e96;
+}
+.custom-gray .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem rgba(134, 142, 150, 0.25);
+}
+.custom-dark .custom-control-input:checked~.custom-control-label::before {
+    border-color: #465161;
+    background-color: #465161;
+}
+.custom-dark .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem rgba(70, 81, 97, 0.25);
 }
 
 /* 多选框 */
+.custom-checkbox .custom-control-label::before {
+    border-radius: 2px;
+}
+.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before {
+    border-color: #33cabb;
+    background-color: #33cabb;
+}
+.custom-checkbox .custom-control-input:disabled:checked ~ .custom-control-label::before {
+    background-color: rgba(51, 202, 187, 0.25);
+}
+.custom-checkbox .custom-control-input:disabled:indeterminate ~ .custom-control-label::before {
+    background-color: rgba(51, 202, 187, 0.25);
+}
+.custom-checkbox.custom-secondary .custom-control-input:indeterminate ~ .custom-control-label::before {
+    border-color: #e4e7ea;
+    background-color: #e4e7ea;
+}
+.custom-checkbox.custom-secondary .custom-control-input:disabled:checked ~ .custom-control-label::before {
+    background-color: rgba(228, 231, 234, 0.25);
+}
+.custom-checkbox.custom-secondary .custom-control-input:disabled:indeterminate ~ .custom-control-label::before {
+    background-color: rgba(228, 231, 234, 0.25);
+}
+.custom-checkbox.custom-secondary .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: #e4e7ea;
+}
+.custom-checkbox.custom-secondary .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+    background-color: #e4e7ea;
+    border-color: #e4e7ea;
+}
+.custom-checkbox.custom-success .custom-control-input:indeterminate ~ .custom-control-label::before {
+    border-color: #15c377;
+    background-color: #15c377;
+}
+.custom-checkbox.custom-success .custom-control-input:disabled:checked ~ .custom-control-label::before {
+    background-color: rgba(21, 195, 119, 0.25);
+}
+.custom-checkbox.custom-success .custom-control-input:disabled:indeterminate ~ .custom-control-label::before {
+    background-color: rgba(21, 195, 119, 0.25);
+}
+.custom-checkbox.custom-success .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: #15c377;
+}
+.custom-checkbox.custom-success .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+    background-color: #15c377;
+    border-color: #15c377;
+}
+.custom-checkbox.custom-info .custom-control-input:indeterminate ~ .custom-control-label::before {
+    border-color: #48b0f7;
+    background-color: #48b0f7;
+}
+.custom-checkbox.custom-info .custom-control-input:disabled:checked ~ .custom-control-label::before {
+    background-color: rgba(72, 176, 247, 0.25);
+}
+.custom-checkbox.custom-info .custom-control-input:disabled:indeterminate ~ .custom-control-label::before {
+    background-color: rgba(72, 176, 247, 0.25);
+}
+.custom-checkbox.custom-info .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: #48b0f7;
+}
+.custom-checkbox.custom-info .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+    background-color: #48b0f7;
+    border-color: #48b0f7;
+}
+.custom-checkbox.custom-warning .custom-control-input:indeterminate ~ .custom-control-label::before {
+    border-color: #faa64b;
+    background-color: #faa64b;
+}
+.custom-checkbox.custom-warning .custom-control-input:disabled:checked ~ .custom-control-label::before {
+    background-color: rgba(250, 166, 75, 0.25);
+}
+.custom-checkbox.custom-warning .custom-control-input:disabled:indeterminate ~ .custom-control-label::before {
+    background-color: rgba(250, 166, 75, 0.25);
+}
+.custom-checkbox.custom-warning .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: #faa64b;
+}
+.custom-checkbox.custom-warning .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+    background-color: #faa64b;
+    border-color: #faa64b;
+}
+.custom-checkbox.custom-danger .custom-control-input:indeterminate ~ .custom-control-label::before {
+    border-color: #f96868;
+    background-color: #f96868;
+}
+.custom-checkbox.custom-danger .custom-control-input:disabled:checked ~ .custom-control-label::before {
+    background-color: rgba(249, 104, 104, 0.25);
+}
+.custom-checkbox.custom-danger .custom-control-input:disabled:indeterminate ~ .custom-control-label::before {
+    background-color: rgba(249, 104, 104, 0.25);
+}
+.custom-checkbox.custom-danger .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: #f96868;
+}
+.custom-checkbox.custom-danger .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+    background-color: #f96868;
+    border-color: #f96868;
+}
+.custom-checkbox.custom-pink .custom-control-input:indeterminate ~ .custom-control-label::before {
+    border-color: #f96197;
+    background-color: #f96197;
+}
+.custom-checkbox.custom-pink .custom-control-input:disabled:checked ~ .custom-control-label::before {
+    background-color: rgba(249, 97, 151, 0.25);
+}
+.custom-checkbox.custom-pink .custom-control-input:disabled:indeterminate ~ .custom-control-label::before {
+    background-color: rgba(249, 97, 151, 0.25);
+}
+.custom-checkbox.custom-pink .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: #f96197;
+}
+.custom-checkbox.custom-pink .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+    background-color: #f96197;
+    border-color: #f96197;
+}
+.custom-checkbox.custom-purple .custom-control-input:indeterminate ~ .custom-control-label::before {
+    border-color: #926dde;
+    background-color: #926dde;
+}
+.custom-checkbox.custom-purple .custom-control-input:disabled:checked ~ .custom-control-label::before {
+    background-color: rgba(146, 109, 222, 0.25);
+}
+.custom-checkbox.custom-purple .custom-control-input:disabled:indeterminate ~ .custom-control-label::before {
+    background-color: rgba(146, 109, 222, 0.25);
+}
+.custom-checkbox.custom-purple .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: #926dde;
+}
+.custom-checkbox.custom-purple .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+    background-color: #926dde;
+    border-color: #926dde;
+}
+.custom-checkbox.custom-brown .custom-control-input:indeterminate ~ .custom-control-label::before {
+    border-color: #8d6658;
+    background-color: #8d6658;
+}
+.custom-checkbox.custom-brown .custom-control-input:disabled:checked ~ .custom-control-label::before {
+    background-color: rgba(141, 102, 88, 0.25);
+}
+.custom-checkbox.custom-brown .custom-control-input:disabled:indeterminate ~ .custom-control-label::before {
+    background-color: rgba(141, 102, 88, 0.25);
+}
+.custom-checkbox.custom-brown .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: #8d6658;
+}
+.custom-checkbox.custom-brown .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+    background-color: #8d6658;
+    border-color: #8d6658;
+}
+.custom-checkbox.custom-cyan .custom-control-input:indeterminate ~ .custom-control-label::before {
+    border-color: #57c7d4;
+    background-color: #57c7d4;
+}
+.custom-checkbox.custom-cyan .custom-control-input:disabled:checked ~ .custom-control-label::before {
+    background-color: rgba(87, 199, 212, 0.25);
+}
+.custom-checkbox.custom-cyan .custom-control-input:disabled:indeterminate ~ .custom-control-label::before {
+    background-color: rgba(87, 199, 212, 0.25);
+}
+.custom-checkbox.custom-cyan .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: #57c7d4;
+}
+.custom-checkbox.custom-cyan .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+    background-color: #57c7d4;
+    border-color: #57c7d4;
+}
+.custom-checkbox.custom-yellow .custom-control-input:indeterminate ~ .custom-control-label::before {
+    border-color: #fcc525;
+    background-color: #fcc525;
+}
+.custom-checkbox.custom-yellow .custom-control-input:disabled:checked ~ .custom-control-label::before {
+    background-color: rgba(252, 197, 37, 0.25);
+}
+.custom-checkbox.custom-yellow .custom-control-input:disabled:indeterminate ~ .custom-control-label::before {
+    background-color: rgba(252, 197, 37, 0.25);
+}
+.custom-checkbox.custom-yellow .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: #fcc525;
+}
+.custom-checkbox.custom-yellow .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+    background-color: #fcc525;
+    border-color: #fcc525;
+}
+.custom-checkbox.custom-gray .custom-control-input:indeterminate ~ .custom-control-label::before {
+    border-color: #868e96;
+    background-color: #868e96;
+}
+.custom-checkbox.custom-gray .custom-control-input:disabled:checked ~ .custom-control-label::before {
+    background-color: rgba(134, 142, 150, 0.25);
+}
+.custom-checkbox.custom-gray .custom-control-input:disabled:indeterminate ~ .custom-control-label::before {
+    background-color: rgba(134, 142, 150, 0.25);
+}
+.custom-checkbox.custom-gray .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: #868e96;
+}
+.custom-checkbox.custom-gray .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+    background-color: #868e96;
+    border-color: #868e96;
+}
+.custom-checkbox.custom-dark .custom-control-input:indeterminate ~ .custom-control-label::before {
+    border-color: #465161;
+    background-color: #465161;
+}
+.custom-checkbox.custom-dark .custom-control-input:disabled:checked ~ .custom-control-label::before {
+    background-color: rgba(70, 81, 97, 0.25);
+}
+.custom-checkbox.custom-dark .custom-control-input:disabled:indeterminate ~ .custom-control-label::before {
+    background-color: rgba(70, 81, 97, 0.25);
+}
+.custom-checkbox.custom-dark .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: #465161;
+}
+.custom-checkbox.custom-dark .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+    background-color: #465161;
+    border-color: #465161;
+}
 
-/* 开关 */
+/* 范围 */
+.custom-range:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(51, 202, 187, 0.25);
+}
+.custom-range:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(51, 202, 187, 0.25);
+}
+.custom-range:focus::-ms-thumb {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(51, 202, 187, 0.25);
+}
+.custom-range::-webkit-slider-thumb {
+    background-color: #33cabb;
+}
+.custom-range::-webkit-slider-thumb:active {
+    background-color: #d5f5f3;
+}
+.custom-range::-webkit-slider-runnable-track {
+    background-color: #ebebeb;
+}
+.custom-range::-moz-range-thumb {
+  background-color: #33cabb;
+}
+.custom-range::-moz-range-thumb:active {
+  background-color: #d5f5f3;
+}
+.custom-range::-moz-range-track {
+  background-color: #ebebeb;
+}
+.custom-range::-ms-thumb {
+  background-color: #33cabb;
+}
+.custom-range::-ms-thumb:active {
+  background-color: #d5f5f3;
+}
+.custom-range::-ms-fill-lower {
+  background-color: #ebebeb;
+}
+.custom-range::-ms-fill-upper {
+  background-color: #ebebeb;
+}
 
 /* 下拉选择 */
 .custom-select {
@@ -2020,9 +2403,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .border-dark {
 	border-color: #465161 !important;
 }
-.border-white {
-	border-color: #fff !important
-}
 .border-lightest {
 	border-color: #fcfdfe !important
 }
@@ -2100,8 +2480,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .text-fadest {
 	color: rgba(77, 82, 89, 0.4) !important
 }
-.text-white {
-    color: #ffffff!important
+.text-white-50 {
+    color: rgba(255,255,255,.5)!important;
 }
 .text-transparent {
 	color: transparent !important
@@ -2157,6 +2537,7 @@ a.badge-info:focus {
     background-color: #65bdf8;
 }
 .badge-warning {
+    color: #fff;
     background-color: #faa64b;
 }
 a.badge-warning:hover,
@@ -2916,8 +3297,8 @@ button.list-group-item:hover {
 }
 .lyear-notifications-info {
     position: relative;
-    height: 185px;
-    max-height: 185px;
+    height: 200px;
+    max-height: 200px;
     margin: 0;
     padding: 0;
 }
@@ -3283,7 +3664,6 @@ button.list-group-item:hover {
         white-space: nowrap;
     }
 }
-
 @media (max-width: 767.98px) {
     .table-responsive-md>.table>tbody>tr>td,
     .table-responsive-md>.table>tbody>tr>th,
@@ -3294,7 +3674,6 @@ button.list-group-item:hover {
         white-space: nowrap;
     }
 }
-
 @media (max-width: 991.98px) {
     .table-responsive-lg>.table>tbody>tr>td,
     .table-responsive-lg>.table>tbody>tr>th,
@@ -3305,7 +3684,6 @@ button.list-group-item:hover {
         white-space: nowrap;
     }
 }
-
 @media (max-width: 1199.98px) {
     .table-responsive-xl>.table>tbody>tr>td,
     .table-responsive-xl>.table>tbody>tr>th,
