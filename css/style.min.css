@@ -138,6 +138,26 @@ i.mdi:after {
 /** ----------------------------------
  * 通用辅助类
  -------------------------------------- */
+/* 禁止双击选中 */
+.not-user-select {
+    -moz-user-select: none; /* 火狐 */
+    -webkit-user-select: none; /* webkit浏览器 */
+    -ms-user-select: none; /* IE10 */
+    -khtml-user-select: none; /* 早期浏览器 */
+    user-select: none;
+}
+
+/* 垂直水平居中 */
+.center-vh {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 100%;
+}
+
 /* 边框 */
 
 /* 布局 */
@@ -179,6 +199,9 @@ i.mdi:after {
 /* 宽度 */
 .w-15 {
     width: 15% !important;
+}
+.w-420 {
+    width: 420px !important;
 }
 
 /* margin */
@@ -418,6 +441,11 @@ hr {
 }
 .jumbotron {
     background-color: #f7fafc;
+}
+.rotate-180 {
+    display: inline-block;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 /** ----------------------------------
@@ -1908,6 +1936,125 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   background-color: #ebebeb;
 }
 
+/* 步骤条 */
+.nav-step {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: baseline;
+	align-items: baseline;
+    padding: 0px;
+	margin-bottom: 1rem;
+}
+.step-dots .nav-step-item {
+	position: relative;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	flex-direction: column;
+	-webkit-box-flex: 1;
+	-webkit-box-align: center;
+	align-items: center;
+	flex: 1 1;
+	padding: 0 12px
+}
+.step-dots .nav-step-item:first-child a::before {
+	display: none
+}
+.step-dots .nav-step-item.complete a,
+.step-dots .nav-step-item.complete a::before,
+.step-dots .nav-step-item.active a,
+.step-dots .nav-step-item.active a::before {
+	background-color: #dcfcfa
+}
+.step-dots .nav-step-item.complete a::after,
+.step-dots .nav-step-item.active a::after {
+	background-color: #33cabb;
+	width: 29px;
+	height: 29px;
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+	color: #fff
+}
+.step-dots .nav-step-item.complete a::after {
+	width: 29px;
+	height: 29px;
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+	color: #fff
+}
+.step-dots .nav-step-item.active a::after {
+	width: 13px;
+	height: 13px;
+	margin-top: 8px;
+	-webkit-transform: translateX(8px);
+	transform: translateX(8px);
+	color: transparent
+}
+.step-dots a {
+	display: -webkit-inline-box;
+	display: inline-flex;
+    padding: 0;
+	margin: 10px 0;
+	width: 29px;
+	height: 29px;
+	max-height: 29px;
+	border-radius: 50%;
+	background-color: #f7fafc;
+	-webkit-transition: .5s;
+	transition: .5s;
+	z-index: 1
+}
+.step-dots a::before {
+	content: '';
+	position: absolute;
+	left: calc(-50% + 14.5px);
+	right: calc(50% + 14.5px);
+	height: 10px;
+	margin-top: 9.5px;
+	background-color: #f7fafc;
+	cursor: default;
+	-webkit-transition: .5s;
+	transition: .5s;
+}
+.step-dots a::after {
+	content: "\f12c";
+	font-family: "Material Design Icons";
+	width: 0;
+	height: 0;
+	text-align: center;
+	font-size: 15px;
+	position: absolute;
+	border-radius: 50%;
+	background-color: transparent;
+	color: transparent;
+	-webkit-transform: translate(14.5px, 14.5px);
+	transform: translate(14.5px, 14.5px);
+	-webkit-transition: .5s;
+	transition: .5s;
+	z-index: 1;
+	display: -webkit-inline-box;
+	display: inline-flex;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	justify-content: center
+}
+.nav-step-pane.active {
+    display: block!important;
+}
+.nav-step-button {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.nav-step-button button.disabled {
+    opacity: 0;
+}
+
 /* 下拉选择 */
 .custom-select {
     border-color: rgba(77, 82, 89, 0.07);
@@ -2051,9 +2198,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .dropdown-header,
 .dropdown-item-text {
     padding: 8px 15px;
-}
-.dropdown-item .mdi {
-    vertical-align: text-top;
 }
 .dropleft .dropdown-toggle::before {
     vertical-align: 1px;
@@ -3134,8 +3278,8 @@ button.list-group-item:hover {
 }
 .nav-drawer > li > a {
     border-right: 3px solid transparent;
-    padding-top: 14px;
-    padding-bottom: 13px;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 .nav-drawer > li > a > span {
     white-space: nowrap;
@@ -3161,7 +3305,7 @@ button.list-group-item:hover {
 .nav-drawer > li > a > i {
     position: absolute;
     left: 21px;
-    top: 11px;
+    top: 8px;
     font-size: 1.25em;
 }
 .nav-drawer ul li ul {
@@ -3588,15 +3732,13 @@ button.list-group-item:hover {
     .dropdown-notice .dropdown-menu {
         left: -38px!important;
     }
-    /*
     .nav-step .nav-step-item p {
         display: none;
     }
-    */
 }
 @media (min-width: 1024px) {
     .lyear-layout-sidebar-close .nav-drawer > li > a {
-        padding: 14px 28px 13px 29px;
+        padding: 12px 28px 12px 29px;
         height: 48px;
     }
     .lyear-layout-sidebar-close .nav-drawer > li > a span {
@@ -3629,8 +3771,8 @@ button.list-group-item:hover {
     .lyear-layout-sidebar-close .lyear-layout-sidebar:hover .nav-drawer > li > a {
         padding-right: 24px;
         padding-left: 52.99999px;
-        padding-top: 14px;
-        padding-bottom: 13px;
+        padding-top: 12px;
+        padding-bottom: 12px;
     }
     .lyear-layout-sidebar-close .lyear-layout-sidebar:hover .nav-drawer > li > a span {
         display: block;

@@ -813,7 +813,7 @@ if (typeof jQuery === "undefined") {
                     var item = menuData[i],
                         el   = $('<li/>');
                     
-                    el.append('<a/>');
+                    el.append('<a class="dropdown-item" />');
                     
                     var a = el.find('a');
                     

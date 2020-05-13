@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 <title>其他通用类 - 光年(Light Year Admin V4)后台管理系统模板</title>
 <link rel="icon" href="favicon.ico" type="image/ico">
-<meta name="keywords" content="LightYear V4,光年,后台模板,后台管理系统,光年HTML模板">
-<meta name="description" content="LightYear V4是一个基于Bootstrap v4.4.1的后台管理系统的HTML模板。">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V4是一个后台管理系统的HTML模板，基于Bootstrap v4.4.1。">
 <meta name="author" content="yinqi">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/materialdesignicons.min.css" rel="stylesheet">
@@ -194,6 +194,73 @@
 &lt;div class="shadow-sm p-3 mb-5 bg-white rounded"&gt;Small shadow&lt;/div&gt;
 &lt;div class="shadow p-3 mb-5 bg-white rounded"&gt;Regular shadow&lt;/div&gt;
 &lt;div class="shadow-lg p-3 mb-5 bg-white rounded"&gt;Larger shadow&lt;/div&gt;</pre>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">垂直对齐</div></header>
+        <div class="card-body">
+          
+          <p>使用 <code>vertical-alignment</code> 通用样式改变元素的对齐，注意：垂直对齐仅影响 内联inline、 内联块inline-block、 内联表inline-table、 表格单元格table cell元素。</p>
+          <p>可选属性有 <code>.align-baseline</code>、 <code>.align-top</code>、 <code>.align-middle</code>、<code>.align-bottom</code>、 <code>.align-text-bottom</code>、 <code>.align-text-top</code> 。</p>
+          <div class="border-example">
+            <span class="align-baseline">baseline基准</span>
+            <span class="align-top">top顶部</span>
+            <span class="align-middle">middle垂直居中</span>
+            <span class="align-bottom">bottom底部</span>
+            <span class="align-text-top">text-top文本顶部</span>
+            <span class="align-text-bottom">text-bottom文本底部</span>
+          </div>
+          <pre>&lt;span class="align-baseline"&gt;baseline基准&lt;/span&gt;
+&lt;span class="align-top"&gt;top顶部&lt;/span&gt;
+&lt;span class="align-middle"&gt;middle垂直居中&lt;/span&gt;
+&lt;span class="align-bottom"&gt;bottom底部&lt;/span&gt;
+&lt;span class="align-text-top"&gt;text-top文本顶部&lt;/span&gt;
+&lt;span class="align-text-bottom"&gt;text-bottom文本底部&lt;/span&gt;</pre>
+          <p>在表格单元格中：</p>
+          <div class="border-example">
+            <table style="height: 100px;">
+              <tbody>
+                <tr>
+                  <td class="align-baseline">baseline</td>
+                  <td class="align-top">top</td>
+                  <td class="align-middle">middle</td>
+                  <td class="align-bottom">bottom</td>
+                  <td class="align-text-top">text-top</td>
+                  <td class="align-text-bottom">text-bottom</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <pre>&lt;table style="height: 100px;"&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td class="align-baseline"&gt;baseline&lt;/td&gt;
+      &lt;td class="align-top"&gt;top&lt;/td&gt;
+      &lt;td class="align-middle"&gt;middle&lt;/td&gt;
+      &lt;td class="align-bottom"&gt;bottom&lt;/td&gt;
+      &lt;td class="align-text-top"&gt;text-top&lt;/td&gt;
+      &lt;td class="align-text-bottom"&gt;text-bottom&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">显示或隐藏</div></header>
+        <div class="card-body">
+          
+          <p>使用通用样式的 <code>visibility</code> 设置元素的可见性，这不会改变元素的 display 值，也不会影响布局，<code>.invisible</code> 元素仍占用页面空间，内容将隐藏但仍然保留在屏幕阅读器中。</p>
+          <p>根据需要选用 <code>.visible</code> 或 <code>.invisible</code> 两个样式类。</p>
+          <pre>&lt;div class="visible"&gt;...&lt;/div&gt;
+&lt;div class="invisible"&gt;...&lt;/div&gt;</pre>
           
         </div>
       </div>
