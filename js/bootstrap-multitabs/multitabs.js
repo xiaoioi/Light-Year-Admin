@@ -641,7 +641,7 @@ if (typeof jQuery === "undefined") {
             }
             //set the nav-panel width
             //var toolWidth = $el.nav.find('.mt-nav-tools-left:visible:first').width() + $el.nav.find('.mt-nav-tools-right:visible:first').width();
-            $el.navPanel.css('width', 'calc(100% - 132px)');
+            $el.navPanel.css('width', 'calc(100% - 147px)');
             self.options = options;
             return self;
         },

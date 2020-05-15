@@ -33,7 +33,9 @@ button,
 a:focus,
 a:active,
 button:focus,
-button:active {
+button:active,
+.input-group-text:focus,
+.input-group-text:active {
     outline: none !important;
 }
 blockquote {
@@ -489,14 +491,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .table-hover tbody tr {
     -webkit-transition: background-color 0.2s linear;
     transition: background-color 0.2s linear;
-}
-.table-condensed > tbody > tr > td,
-.table-condensed > tbody > tr > th,
-.table-condensed > tfoot > tr > td,
-.table-condensed > tfoot > tr > th,
-.table-condensed > thead > tr > td,
-.table-condensed > thead > tr > th {
-    padding: .5em;
 }
 .table>caption+thead>tr:first-child>td,
 .table>caption+thead>tr:first-child>th,
@@ -1539,7 +1533,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .form-control {
     font-size: 14px;
     height: calc(1.5em + .75rem + 3px);
-    border-color: rgba(77, 82, 89, 0.07);
+    border-color: #F2F3F3/*rgba(77, 82, 89, 0.07)*/;
     -webkit-border-radius: 2px;
     border-radius: 2px;
     color: #8b95a5;
@@ -1564,6 +1558,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     padding: .3rem .75rem;
     -webkit-border-radius: 2px;
     border-radius: 2px;
+    background-color: #f9fafb;
     border-color: #F2F3F3;/*rgba(77, 82, 89, 0.07);*/
 }
 
