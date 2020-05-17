@@ -464,6 +464,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .table-bordered {
     border-color: rgba(77, 82, 89, 0.07)!important;
 }
+.table-responsive>.table-bordered {
+    border-width: 1px;
+    border-style: solid;
+}
 .table > tbody > tr > td,
 .table > tbody > tr > th,
 .table > tfoot > tr > td,
@@ -2365,6 +2369,20 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     padding-right: 0;
 }
 
+/* card-toolbar */
+.card-toolbar {
+    padding: 20px 20px 0 20px;
+}
+.card-toolbar .input-group-prepend {
+    position: relative;
+}
+.card-toolbar .dropdown-menu {
+    min-width: 100%;
+}
+.card-toolbar .toolbar-btn-action .btn {
+    margin-bottom: 5px;
+}
+
 /* 卡片颜色 */
 .card[class*="bg-"]:not(.bg-secondary) .card-actions li a,
 .card[class*="bg-"]:not(.bg-secondary) .card-title small,
@@ -2899,6 +2917,7 @@ button.list-group-item:hover {
     line-height: 1.3;
     border-radius: 2px;
     border-color: #ececec;
+    white-space: nowrap!important;
 }
 .page-link:hover {
     color: #4d5259;
@@ -3064,6 +3083,93 @@ button.list-group-item:hover {
 }
 .breadcrumb {
     background-color: #f5f6f7;
+}
+
+/* 多图 */
+.lyear-uploads-pic {}
+.lyear-uploads-pic li {
+    margin-bottom: 10px;
+}
+.lyear-uploads-pic figure  {
+    position: relative;
+    background: #4d5259;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 0px;
+}
+.lyear-uploads-pic figure img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    max-width: 100%;
+    width: 100%;
+    opacity: 1;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+.lyear-uploads-pic figure:hover img {
+    opacity: 0.5;
+}
+.lyear-uploads-pic figure figcaption,
+.lyear-uploads-pic figure figcaption > a:not(.btn) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.lyear-uploads-pic figure figcaption {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    text-transform: none;
+    padding: 2em;
+    color: #fff;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: .35s;
+    transition: .35s;
+}
+.lyear-uploads-pic figure figcaption > a {
+    position: static;
+    z-index: auto;
+    text-indent: 0;
+    white-space: nowrap;
+    opacity: 1;
+	margin-left: 2px;
+	margin-right: 2px
+}
+.lyear-uploads-pic figure figcaption > *:first-child {
+    margin-left: 0;
+}
+.lyear-uploads-pic figure:hover figcaption {
+	-webkit-transform: scale(1);
+	transform: scale(1)
+}
+.lyear-uploads-pic .pic-add {
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border: 1px dashed #ebebeb;
+    font-family: "Material Design Icons";
+    font-size: 2.875rem;
+    color: #8b95a5;
+    -webkit-transition: .35s;
+    transition: .35s;
+}
+.lyear-uploads-pic .pic-add:before {
+    content: "\f415";
+}
+.lyear-uploads-pic .pic-add:hover {
+    border-color: #33cabb;
+    color: #33cabb;
 }
 
 /** ----------------------------------
@@ -3799,6 +3905,13 @@ button.list-group-item:hover {
     .table-responsive-sm>.table>thead>tr>td,
     .table-responsive-sm>.table>thead>tr>th {
         white-space: nowrap;
+    }    
+    .pagination .page-item {
+        display: none;
+    }
+    .pagination .page-item:first-child,
+    .pagination .page-item:last-child {
+        display: block;
     }
 }
 @media (max-width: 767.98px) {
@@ -3812,6 +3925,37 @@ button.list-group-item:hover {
     }
 }
 @media (max-width: 991.98px) {
+    .table-responsive {
+        border: 1px solid #f2f3f3;
+    }
+    .table-responsive>.table {
+        margin-bottom: 0;
+    }
+    .table-responsive>.table-bordered {
+        border: 0!important;
+    }
+    .table-responsive>.table-bordered>tbody>tr>td:first-child,
+    .table-responsive>.table-bordered>tbody>tr>th:first-child,
+    .table-responsive>.table-bordered>tfoot>tr>td:first-child,
+    .table-responsive>.table-bordered>tfoot>tr>th:first-child,
+    .table-responsive>.table-bordered>thead>tr>td:first-child,
+    .table-responsive>.table-bordered>thead>tr>th:first-child {
+        border-left: 0;
+    }
+    .table-responsive>.table-bordered>tbody>tr:last-child>td,
+    .table-responsive>.table-bordered>tbody>tr:last-child>th,
+    .table-responsive>.table-bordered>tfoot>tr:last-child>td,
+    .table-responsive>.table-bordered>tfoot>tr:last-child>th {
+        border-bottom: 0;
+    }
+    .table-responsive>.table-bordered>tbody>tr>td:last-child,
+    .table-responsive>.table-bordered>tbody>tr>th:last-child,
+    .table-responsive>.table-bordered>tfoot>tr>td:last-child,
+    .table-responsive>.table-bordered>tfoot>tr>th:last-child,
+    .table-responsive>.table-bordered>thead>tr>td:last-child, 
+    .table-responsive>.table-bordered>thead>tr>th:last-child {
+        border-right: 0;
+    }
     .table-responsive-lg>.table>tbody>tr>td,
     .table-responsive-lg>.table>tbody>tr>th,
     .table-responsive-lg>.table>tfoot>tr>td,
@@ -3819,6 +3963,9 @@ button.list-group-item:hover {
     .table-responsive-lg>.table>thead>tr>td,
     .table-responsive-lg>.table>thead>tr>th {
         white-space: nowrap;
+    }
+    .table-responsive ~ .pagination {
+        margin-top: 1rem;
     }
 }
 @media (max-width: 1199.98px) {
