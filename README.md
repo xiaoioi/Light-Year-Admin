@@ -51,3 +51,20 @@
 
 2020.05.13
 完成bootstrap的基础组件
+
+#### 截图
+![登录页面一](https://images.gitee.com/uploads/images/2020/0519/221358_55b9d666_82992.png "首页 - 光年(Light Year Admin V4)后台管理系统模板8.png")
+
+![登录页面2](https://images.gitee.com/uploads/images/2020/0519/221535_3f2cd076_82992.png "登录页面 - 光年(Light Year Admin V4)后台管理系统模板7.png")
+
+![首页](https://images.gitee.com/uploads/images/2020/0519/221618_b00cc789_82992.png "首页.png")
+
+![下拉菜单](https://images.gitee.com/uploads/images/2020/0519/221640_c55f42a1_82992.png "下拉菜单.png")
+
+![卡片](https://images.gitee.com/uploads/images/2020/0519/221652_e9edebc4_82992.png "卡片.png")
+
+![按钮](https://images.gitee.com/uploads/images/2020/0519/221702_d2494de4_82992.png "按钮.png")
+
+![警告框](https://images.gitee.com/uploads/images/2020/0519/221722_e57b00a2_82992.png "警告框.png")
+
+![表格插件](https://images.gitee.com/uploads/images/2020/0519/221558_932a3722_82992.png "表格插件.png")
