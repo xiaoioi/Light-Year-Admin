@@ -13,6 +13,19 @@
 这里就不弄非iframe版本的了，该项目会进行一段时间，基于bootstrap 4.4.1版本。
 因4.*的版本，一些class的命名已经改变，并且布局由float改成了flex，所以项目不支持从3.7版本升级到4.4.1版本。
 
+#### 3.*和4.*的一些区别
+- 3中的pull-left和pull-right已改成float-left和float-right，hidden改为d-none
+- 删除了原有的label类，统一成badge
+- 原有的nav下面的li和a标签，新增了class，li上的nav-item，a上的nav-link
+- 下拉选项中需要dropdown-item，分割线类名改为dropdown-divider，并且向下的那个图标不需要在新增span元素了
+- 输入框组中的input-group-addon已改为input-group-prepend和input-group-append以及input-group-text搭配
+- card在3中是没有的，4因为有了默认的一些样式，这里在4的上面做了些调整，并处理成之前差不多的样子
+- 栅格布局由原来的float:left改成了flex布局的方式
+- carousel幻灯片，原有的item改为carousel-item，left carousel-control和right carousel-control改成carousel-control-prev和carousel-control-next
+- 分页中新增了page-item和page-link
+- 4中原有响应式样式table-responsive不显示边框，这里调整为跟3版本一样的效果
+- 4中新增了不少内容，像复选框、单选框和滑块都有自定义的样式，另外还有新增spinners和toasts等
+
 #### 交流群
 703726776
 
@@ -40,6 +53,9 @@
 - ...
 
 #### 更新记录
+2020.05.20
+增加两个插件页面，文档页面增加通用ajax请求方法
+
 2020.05.19
 修改bug & 增加演示页面
 

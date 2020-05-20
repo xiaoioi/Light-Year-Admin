@@ -1459,7 +1459,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .show > .btn-outline-brown.dropdown-toggle:focus {
     box-shadow: none;
 }
-
+.show .dropdown-item.active:hover {
+    color: #FFF;
+}
 .btn-round {
     -webkit-border-radius: 10rem;
 }
