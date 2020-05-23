@@ -50,9 +50,16 @@
 - lyear-loading
 - perfect-scrollbar
 - popper
+- bootstrap.wizard
+- fullcalendar
+- bootstrap-maxlength
+- bootstrap-select
 - ...
 
 #### 更新记录
+2020.05.23
+增加日程插件和表单箱单页面，调整表单向导html结构，新增时光轴
+
 2020.05.20
 增加两个插件页面，文档页面增加通用ajax请求方法
 
