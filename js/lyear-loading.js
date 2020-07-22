@@ -53,12 +53,10 @@
                 
                 var toolMethods = {
                     resizeStyle: function() {
-                        var isSafari       = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent),
-                            $parent        = $this.find('.' + defaultClass).parent(),
+                        var $parent        = $this.find('.' + defaultClass).parent(),
                             parentPosition = ('fixed,relative').indexOf($parent.css('position')),
                             isFixed        = parentPosition > -1 || $parent[0] === $('.' + defaultClass)[0].offsetParent,
-                            safariBug      = parentPosition < 0 && $parent[0].offsetParent !== $('body')[0] && isSafari,
-                            offsetP        = isFixed || safariBug ? { top: 0, left: 0 } : { top: $parent[0].offsetTop, left: $parent[0].offsetLeft },
+                            offsetP        = isFixed ? { top: 0, left: 0 } : { top: $parent[0].offsetTop, left: $parent[0].offsetLeft },
 		                    parentW        = $this.outerWidth(),
 		                    parentH        = $this.outerHeight();
                         
