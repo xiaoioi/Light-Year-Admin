@@ -653,7 +653,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .btn-default {
 	background-color: #fcfdfe;
 	border-color: #ebebeb;
-	color: #8b95a5
+	color: #8b95a5!important;
 }
 .btn-default:hover {
 	background-color: #f9fafb;
