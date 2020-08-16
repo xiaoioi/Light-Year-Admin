@@ -3363,12 +3363,12 @@ button.list-group-item:hover {
     break-inside: avoid;
     padding-bottom: 30px;
 }
-.masonry-grid.gap-2 {
+.masonry-grid {
     -webkit-column-gap: 16px;
     -moz-column-gap: 16px;
     column-gap: 16px;
 }
-.masonry-grid.gap-2 .masonry-item {
+.masonry-grid .masonry-item {
     padding-bottom: 16px;
 }
 
@@ -4059,6 +4059,11 @@ button.list-group-item:hover {
         -webkit-transition: opacity 0.3s ease-in-out 0.15s;
         transition: opacity 0.3s ease-in-out 0.15s;
     }
+    .masonry-grid {
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 4;
+    }
 }
 @media (min-width: 0) {
     .card-group .card+.card {
@@ -4093,6 +4098,11 @@ button.list-group-item:hover {
     .table-responsive-md>.table>thead>tr>td,
     .table-responsive-md>.table>thead>tr>th {
         white-space: nowrap;
+    }
+    .masonry-grid {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
     }
 }
 @media (min-width: 992px) {
