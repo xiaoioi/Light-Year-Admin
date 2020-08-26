@@ -3255,6 +3255,10 @@ button.list-group-item:hover {
 .popover {
     line-height: 1.72;
 }
+.col-form-label {
+    padding-top: calc(.3125rem + 1px);
+    padding-bottom: calc(.3125rem + 1px);
+}
 .breadcrumb {
     background-color: #f5f6f7;
 }
