@@ -109,3 +109,6 @@ li:hover .mt-close-tab {
 .mt-nav-tools-right li a {
     padding-right: 15px!important;
 }
+.mt-nav-bar .mt-nav .nav-tabs .mt-dragging {
+    margin-bottom: -1px;
+}

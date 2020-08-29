@@ -847,6 +847,35 @@ if (typeof jQuery === "undefined") {
                     menu.hide();
                 });
             });
+            
+            // 双击事件
+            handler($el.nav, 'dblclick', '.mt-nav-tab', function (event) {
+                if (options.dbclickRefresh === true) {
+                    var $this    = $(this),
+                        $nav     = $this.closest('li'),
+                        $navTab  = self._getNavTab($nav),
+                        $tabPane = self._getTabPane($navTab),
+                        param    = $navTab.length ? self._getParam($navTab) : {},
+                        tempTabPane = $($tabPane);
+                    
+                    if (tempTabPane.is('iframe')) {
+                        tempTabPane.attr('src', param.url);
+                    } else {
+                        $.ajax({
+                            url: param.url,
+                            dataType: "html",
+                            success: function (callback) {
+                                tempTabPane.html(self.options.content.ajax.success(callback));
+                            },
+                            error: function (callback) {
+                                tempTabPane.html(self.options.content.ajax.error(callback));
+                            }
+                        });
+                    }
+                }
+                
+                return false;
+            });
 
             //close tab
             handler($el.nav, 'click', '.mt-close-tab', function () {
@@ -1192,6 +1221,7 @@ if (typeof jQuery === "undefined") {
         init: [],
         isNewTab: false, // 是否以新tab标签打开，为true时，每次点击都会打开新的tab
         refresh: 'no', // iframe中页面是否刷新，'no'：'从不刷新'，'nav'：'点击菜单刷新'，'all'：'菜单和tab点击都刷新'
+        dbclickRefresh: false, // 双击刷新开启最好不要和refresh:'all'同时使用
         nav: {
             backgroundColor: '#f5f5f5', //default nav-bar background color
             class: '', //class of nav

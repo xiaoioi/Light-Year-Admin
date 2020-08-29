@@ -64,7 +64,7 @@
   &lt;&lt;div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;25%&lt;/div&gt;
 &lt;/div&gt;</pre>
           <h6>高度</h6>
-          <p>我们只在 <code>.progress</code> 上设置了一个height值，所以如果你改变了这个值，那么内部的 <code>.progress-bar</code> 高度会自动调整大小。</p>
+          <p>我们只在 <code>.progress</code> 上设置了一个height值，所以如果你改变了这个值，那么内部的 <code>.progress-bar</code> 高度会自动调整大小。为了方便使用新增默认样式 <code>.progress-sm</code>，高度为 <code>5px</code></p>
           <div class="border-example">
             <div class="progress" style="height: 1px;">
               <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
@@ -72,11 +72,17 @@
             <div class="progress" style="height: 20px;">
               <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
+            <div class="progress progress-sm">
+              <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
           </div>
 <pre>&lt;div class="progress" style="height: 1px;"&gt;
   &lt;div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
 &lt;/div>
 &lt;div class="progress" style="height: 20px;"&gt;
+  &lt;div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress progress-sm"&gt;
   &lt;div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
 &lt;/div&gt;</pre>
           <h6>背景颜色</h6>
