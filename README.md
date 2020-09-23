@@ -7,6 +7,8 @@
 
 [猛戳这里去Light Year Admin Using Iframe项目](https://gitee.com/yinqi/Light-Year-Admin-Using-Iframe)
 
+[猛戳这里去插件整合项目（含v3和v4两个版本示例）](https://gitee.com/yinqi/Light-Year-Example)
+
 #### 介绍
 该项目是光年后台管理模板(Light Year Admin Iframe)基于bootstrap 4.4.1版本。
 
