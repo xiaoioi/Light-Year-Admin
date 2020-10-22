@@ -3701,11 +3701,10 @@ button.list-group-item:hover {
 }
 .nav-item-has-subnav > a:after {
     position: absolute;
-    top: 14px;
     right: 24px;
     font-family: 'Material Design Icons';
     font-size: 10px;
-    line-height: 1.75;
+    line-height: 2;
     content: '\f142';
     -webkit-transition: -webkit-transform 0.3s linear;
     transition: -webkit-transform 0.3s linear;
