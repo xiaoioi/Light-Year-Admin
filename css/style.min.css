@@ -4011,12 +4011,11 @@ button.list-group-item:hover {
 
 [data-logobg*='color_'] .sidebar-header img {
     position: relative;
-	left: -220px;
-    -webkit-filter: drop-shadow(rgb(255, 255, 255) 220px 0px);
-	-moz-filter: drop-shadow(rgb(255, 255, 255) 220px 0px);
-    -ms-filter: drop-shadow(rgb(255, 255, 255) 220px 0px);
-    -o-filter: drop-shadow(rgb(255, 255, 255) 220px 0px);
-    filter: drop-shadow(rgb(255, 255, 255) 220px 0px);
+    -webkit-filter: brightness(275%);
+	-moz-filter: brightness(275%);
+    -ms-filter: brightness(275%);
+    -o-filter: brightness(275%);
+    filter: brightness(275%);
 }
 [data-headerbg*='color_'] .lyear-layout-header,
 [data-headerbg*='color_'] .lyear-layout-header .topbar-right > li > a,
