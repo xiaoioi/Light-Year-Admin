@@ -3701,6 +3701,7 @@ button.list-group-item:hover {
 }
 .nav-item-has-subnav > a:after {
     position: absolute;
+    top: 12px;
     right: 24px;
     font-family: 'Material Design Icons';
     font-size: 10px;
@@ -3710,6 +3711,9 @@ button.list-group-item:hover {
     transition: -webkit-transform 0.3s linear;
     transition: transform 0.3s linear;
     transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+.nav-item-has-subnav .nav-item-has-subnav > a:after {
+    top: 10px;
 }
 .nav-item-has-subnav.open > a:after {
     -webkit-transform: rotate(90deg);
