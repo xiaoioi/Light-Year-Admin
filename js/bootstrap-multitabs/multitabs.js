@@ -674,7 +674,7 @@ if (typeof jQuery === "undefined") {
                 }
             }
             //if no any tab actived, active the main tab
-            if (!$el.navPanelList.children('li a.active').length) {
+            if (!$el.navPanelList.children('li').find('a.active').length) {
                 self.active($el.navPanelList.find('[data-type="main"]:first'));
             }
             return self;
