@@ -325,11 +325,11 @@ if (typeof jQuery === "undefined") {
             var navTabParam = $navTab.length ? self._getParam($navTab) : {};
             //change storage active status
             var storage = self._storage();
-            if (storage[prevNavTabParam.id]) {
-                storage[prevNavTabParam.id].active = false;
+            if (storage[prevNavTabParam.did]) {
+                storage[prevNavTabParam.did].active = false;
             }
-            if (storage[navTabParam.id]) {
-                storage[navTabParam.id].active = true;
+            if (storage[navTabParam.did]) {
+                storage[navTabParam.did].active = true;
             }
             self._resetStorage(storage);
             //active navTab and tabPane
