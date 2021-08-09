@@ -31,6 +31,9 @@
 #### 交流群
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0419/100848_c8cf9210_82992.png "光年后台模板交流群群聊二维码.png")
 
+#### Class搜索小工具
+[此网址可以方便找到v3和v4中自己想要的class](http://libs.itshubao.com/lyear-search-class/)
+
 #### 特别感谢
 - Bootstrap v4.4.1
 - JQuery
