@@ -656,12 +656,17 @@ if (typeof jQuery === "undefined") {
                 $el = self.$element,
                 options = self.options,
                 storage, init = options.init,
-                param;
+                param,
+                tempParam;
             if (supportStorage(options.cache)) {
                 storage = self._storage();
                 self._resetStorage({});
                 $.each(storage, function (k, v) {
                     self.create(v, false);
+                    if (v.active) {
+                        tempParam = self._getParam(v);
+                        self.activeMenu(self._exist(tempParam));
+                    }
                 })
             }
             if ($.isEmptyObject(storage)) {
