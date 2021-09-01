@@ -357,7 +357,7 @@ if (typeof jQuery === "undefined") {
                 if ($tabPane.is('iframe')) {
                   
                     //if (!$tabPane.attr('src')) {
-                    if ((!$tabPane.attr('src') && options.refresh == 'no') || (options.refresh == 'nav' && isNavBar) || options.refresh == 'all'){
+                    if (!$tabPane.attr('src') || (!$tabPane.attr('src') && options.refresh == 'no') || (options.refresh == 'nav' && isNavBar) || options.refresh == 'all'){
                         $tabPane.attr('src', param.url);
                     }
                 } else {
