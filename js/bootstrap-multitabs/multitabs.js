@@ -1008,6 +1008,7 @@ if (typeof jQuery === "undefined") {
                 if (!param) {
                     return storage[key];
                 }
+                tabIndex = Object.keys(storage).length;
                 storage[key] = param;
                 sessionStorage.multitabs = JSON.stringify(storage);
                 return storage;
