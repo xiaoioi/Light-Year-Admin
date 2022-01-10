@@ -20,8 +20,8 @@
         var opts = $.extend({}, defaults, options);
         
         // 如果没有当前对象，这适用参数中的，两者都没有，提示报错并退出
-        if ($this.length == 0 && opts.ele != null) {
-            $this = opts.ele;
+        if ($this.length == 0 && opts.eleObj != null) {
+            $this = opts.eleObj;
         }
         
         if ($this.length == 0) {
