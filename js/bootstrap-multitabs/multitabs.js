@@ -554,19 +554,17 @@ if (typeof jQuery === "undefined") {
                 $navHasSubnav = $navObj.parents('.nav-item'),
                 $viSubHeight  = $navHasSubnav.siblings().find('.nav-subnav:visible').outerHeight();
             
-            $('.nav-item').each(function(i){
-                if ($(this).hasClass('active') && !$navObj.parents('.nav-item').last().hasClass('active')) {
-                    $(this).removeClass('active').removeClass('open');
-                    $(this).find('.nav-subnav:visible').slideUp(500);
-                    if (window.innerWidth > 1024 && $('body').hasClass('lyear-layout-sidebar-close')) {
-                        $(this).find('.nav-subnav').hide();
-                    }
+            $('.nav-drawer .nav-item').not($navHasSubnav).each(function() {
+                if (window.innerWidth > 1024 && $('body').hasClass('lyear-layout-sidebar-close')) {
+                    $(this).find('.nav-subnav').hide();
                 }
+                $(this).find('.nav-subnav:visible').slideUp(500);
+                $(this).removeClass('active open');
             });
             
             $('.nav-drawer').find('li').removeClass('active');
             $navObj.parent('li').addClass('active');
-            $navHasSubnav.first().addClass('active');
+            $navHasSubnav.addClass('active');
             
             // 当前菜单无子菜单
             if (!$navObj.parents('.nav-item').first().is('.nav-item-has-subnav')) {
@@ -574,37 +572,44 @@ if (typeof jQuery === "undefined") {
                 $('.lyear-layout-sidebar-info').animate({scrollTop: hht}, 300);
             }
             
-            if ($navObj.parents('ul.nav-subnav').last().is(':hidden')) {
-                $navObj.parents('ul.nav-subnav').last().slideDown(500, function(){
-                    $navHasSubnav.last().addClass('open');
-		            var scrollHeight  = 0,
-                        $scrollBox    = $('.lyear-layout-sidebar-info'),
-		                pervTotal     = $navHasSubnav.last().prevAll().length,
-		                boxHeight     = $scrollBox.outerHeight(),
-	                    innerHeight   = $('.sidebar-main').outerHeight(),
-                        thisScroll    = $scrollBox.scrollTop(),
-                        thisSubHeight = $(this).outerHeight(),
-                        footHeight    = 121;
-		            
-		            if (footHeight + innerHeight - boxHeight >= (pervTotal * 48)) {
-		                scrollHeight = pervTotal * 48;
-		            }
-                    if ($navHasSubnav.length == 1) {
-                        $scrollBox.animate({scrollTop: scrollHeight}, 300);
-                    } else {
-                        // 子菜单操作
-                        if (typeof($viSubHeight) != 'undefined' && $viSubHeight != null) {
-                            scrollHeight = thisScroll + thisSubHeight - $viSubHeight;
+            var $sideDownObj = $navObj.parents('ul.nav-subnav').filter(':hidden');
+            var $sideDownLen = $sideDownObj.length;
+
+            $sideDownObj.each(function(i) {
+                $(this).slideDown(500, function() {
+                    $(this).parent('.nav-item').addClass('open');
+                    
+                    if (i === $sideDownLen - 1) {
+                        var scrollHeight  = 0,
+                            $scrollBox    = $('.lyear-layout-sidebar-info'),
+		                    pervTotal     = $navHasSubnav.last().prevAll().length,
+		                    boxHeight     = $scrollBox.outerHeight(),
+	                        innerHeight   = $('.sidebar-main').outerHeight(),
+                            thisScroll    = $scrollBox.scrollTop(),
+                            thisSubHeight = $(this).outerHeight(),
+                            footHeight    = 121;
+		                
+		                if (footHeight + innerHeight - boxHeight >= (pervTotal * 48)) {
+		                    scrollHeight = pervTotal * 48;
+		                }
+                        
+                        if ($navHasSubnav.length == 1) {
                             $scrollBox.animate({scrollTop: scrollHeight}, 300);
                         } else {
-                            if ((thisScroll + boxHeight - $scrollBox[0].scrollHeight) == 0) {
-                                scrollHeight = thisScroll - thisSubHeight;
+                            // 子菜单操作
+                            if (typeof($viSubHeight) != 'undefined' && $viSubHeight != null) {
+                                scrollHeight = thisScroll + thisSubHeight - $viSubHeight;
                                 $scrollBox.animate({scrollTop: scrollHeight}, 300);
+                            } else {
+                                if ((thisScroll + boxHeight - $scrollBox[0].scrollHeight) == 0) {
+                                    scrollHeight = thisScroll - thisSubHeight;
+                                    $scrollBox.animate({scrollTop: scrollHeight}, 300);
+                                }
                             }
                         }
                     }
                 });
-            }
+            });
         },
 
         /**
