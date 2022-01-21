@@ -3,7 +3,7 @@ if (typeof jQuery === "undefined") {
     throw new Error("MultiTabs requires jQuery");
 }((function ($) {
     "use strict";
-    var NAMESPACE, tabIndex; //variable
+    var NAMESPACE; //variable
     var MultiTabs, handler, getTabIndex, isExtUrl, sumDomWidth, trimText, supportStorage; //function
     var defaultLayoutTemplates, defaultInit; //default variable
 
@@ -24,16 +24,18 @@ if (typeof jQuery === "undefined") {
 
     /**
      * get index for tab
-     * @param content   content type, for 'main' tab just can be 1
-     * @param capacity  capacity of tab, except 'main' tab
-     * @returns int     return index
+     * @param content content type, for 'main' tab just can be 1
+     * @param url
+     * @returns string return index
      */
-    getTabIndex = function (content, capacity) {
+    getTabIndex = function (content, url) {
         if (content === 'main') return 0;
-        capacity = capacity || 8; //capacity of maximum tab quantity, the tab will be cover if more than it
-        tabIndex = tabIndex || 0;
-        tabIndex++;
-        tabIndex = tabIndex % capacity;
+        
+        var tabIndex = window.btoa(url);
+        tabIndex = tabIndex.replace(/\+/g, "_43");
+        tabIndex = tabIndex.replace(/\//g, "_47");
+        tabIndex = tabIndex.replace(/=/g, "_61");
+
         return tabIndex;
     };
 
@@ -639,9 +641,7 @@ if (typeof jQuery === "undefined") {
             //$el.navTabMain    = $('#multitabs_main_0');
             $el.navToolsRight = $el.nav.find('.mt-nav-tools-right:first');
             $el.tabContent = $el.find('.tab-content:first');
-            //hide tab-header if maxTabs less than 1
-            if (options.nav.maxTabs <= 1) {
-                options.nav.maxTabs = 1;
+            if (options.nav.showTabs == false) {
                 $el.nav.hide();
             }
             //set the nav-panel width
@@ -991,7 +991,7 @@ if (typeof jQuery === "undefined") {
             //active
             param.active = data.active || obj.active || false;
             //index
-            param.index = data.index || obj.index || getTabIndex(param.type, options.nav.maxTabs);
+            param.index = data.index || obj.index || getTabIndex(param.type, param.url);
             //id
             param.did = data.did || obj.did || this._generateId(param);
             return param;
@@ -1013,7 +1013,6 @@ if (typeof jQuery === "undefined") {
                 if (!param) {
                     return storage[key];
                 }
-                tabIndex = Object.keys(storage).length;
                 storage[key] = param;
                 sessionStorage.multitabs = JSON.stringify(storage);
                 return storage;
@@ -1239,7 +1238,7 @@ if (typeof jQuery === "undefined") {
             draggable: true, //nav tab draggable option
             fixed: false, //fixed the nav-bar
             layout: 'default', //it can be 'default', 'classic' (all hidden tab in dropdown list), and simple
-            maxTabs: 15, //Max tabs number (without counting main tab), when is 1, hide the whole nav
+            showTabs: true, // 是否显示Tab标签栏
             maxTitleLength: 25, //Max title length of tab
             showCloseOnHover: false, //while is true, show close button in hover, if false, show close button always
             style: 'nav-tabs' //can be nav-tabs or nav-pills
