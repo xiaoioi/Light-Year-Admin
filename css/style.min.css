@@ -2727,12 +2727,12 @@ a.text-danger:hover,a.text-danger:focus {
 
 /* 徽章 */
 .badge {
-    -weikit-border-radius: 2px;
+    -webkit-border-radius: 2px;
     border-radius: 2px;
     font-weight: 300;
 }
 .badge-pill {
-    -weikit-border-radius: 10rem;
+    -webkit-border-radius: 10rem;
     border-radius: 10rem;
 }
 .badge-primary {
