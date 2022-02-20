@@ -2733,8 +2733,10 @@ a.text-danger:hover,a.text-danger:focus {
 /* 徽章 */
 .badge {
     -webkit-border-radius: 2px;
-    border-radius: 2px;
+    border-radius: 3px;
+	font-size: 7px;
     font-weight: 300;
+	padding: 5px 6px;
 }
 .badge-pill {
     -webkit-border-radius: 10rem;
@@ -3078,7 +3080,7 @@ button.list-group-item:hover {
 }
 .modal-content {
     -webkit-border-radius: 2px;
-    border-radius: 2px;
+    border-radius: 15px;
     border: none;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -3101,13 +3103,13 @@ button.list-group-item:hover {
 
 /* 分页 */
 .pagination {
-    border-radius: 2px;
+    border-radius: 5px;
 }
 .page-link {
     color: #6c757d;
     margin: 0 3px;
     line-height: 1.3;
-    border-radius: 2px;
+    border-radius: 5px;
     border-color: #ececec;
     white-space: nowrap!important;
 }
@@ -3127,7 +3129,7 @@ button.list-group-item:hover {
 .pagination-sm .page-item:first-child .page-link,
 .pagination-lg .page-item:last-child .page-link,
 .pagination-sm .page-item:last-child .page-link {
-    border-radius: 2px;
+    border-radius: 5px;
 }
 .page-item.disabled .page-link {
     color: #6c757d;
