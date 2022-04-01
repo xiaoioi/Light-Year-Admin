@@ -5,6 +5,9 @@
 
 最新的版本，已经有小伙伴改成蓝色和圆角的样式了，这里演示网站暂未更新（有空我会弄一个新的地址）。
 
+原有的版本，我已经拉取了一个新的分支，可以选择feature/非圆角青绿配色分支查看。
+
+
 [猛戳这里去Light Year Admin项目](https://gitee.com/yinqi/Light-Year-Admin-Template)
 
 [猛戳这里去Light Year Admin Using Iframe项目](https://gitee.com/yinqi/Light-Year-Admin-Using-Iframe)
@@ -111,6 +114,9 @@
 ![输入图片说明](%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20220401104922.png)
 
 #### 原有的颜色
+
+原有的版本，我已经拉取了一个新的分支，可以选择feature/非圆角青绿配色分支查看。
+
 ![登录页面一](https://images.gitee.com/uploads/images/2020/0519/221358_55b9d666_82992.png "首页 - 光年(Light Year Admin V4)后台管理系统模板8.png")
 
 ![登录页面2](https://images.gitee.com/uploads/images/2020/0519/221535_3f2cd076_82992.png "登录页面 - 光年(Light Year Admin V4)后台管理系统模板7.png")
