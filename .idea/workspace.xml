@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="65e7b6a4-82c5-4e16-9dae-a392afc08889" name="默认变更列表" comment="删除无用说明文件以及补充说明" />
+    <list default="true" id="65e7b6a4-82c5-4e16-9dae-a392afc08889" name="默认变更列表" comment="删除无用说明文件以及补充说明">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,7 +24,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../phpstudy_pro/WWW/wxwork-admin-laravel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -36,6 +38,7 @@
       <updated>1645343001758</updated>
       <workItem from="1645343003462" duration="2264000" />
       <workItem from="1648780868321" duration="698000" />
+      <workItem from="1650357905411" duration="327000" />
     </task>
     <task id="LOCAL-00001" summary="修改了部分样式">
       <created>1645345583742</created>
