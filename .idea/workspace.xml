@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="65e7b6a4-82c5-4e16-9dae-a392afc08889" name="默认变更列表" comment="删除无用说明文件以及补充说明">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="65e7b6a4-82c5-4e16-9dae-a392afc08889" name="默认变更列表" comment="补充更新说明" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +36,7 @@
       <updated>1645343001758</updated>
       <workItem from="1645343003462" duration="2264000" />
       <workItem from="1648780868321" duration="698000" />
-      <workItem from="1650357905411" duration="327000" />
+      <workItem from="1650357905411" duration="985000" />
     </task>
     <task id="LOCAL-00001" summary="修改了部分样式">
       <created>1645345583742</created>
@@ -61,7 +59,21 @@
       <option name="project" value="LOCAL" />
       <updated>1645347667942</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="增加更新说明">
+      <created>1650358492386</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1650358492386</updated>
+    </task>
+    <task id="LOCAL-00005" summary="补充更新说明">
+      <created>1650358889674</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1650358889674</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -82,6 +94,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="修改了部分样式" />
     <MESSAGE value="删除无用说明文件以及补充说明" />
-    <option name="LAST_COMMIT_MESSAGE" value="删除无用说明文件以及补充说明" />
+    <MESSAGE value="增加更新说明" />
+    <MESSAGE value="补充更新说明" />
+    <option name="LAST_COMMIT_MESSAGE" value="补充更新说明" />
   </component>
 </project>

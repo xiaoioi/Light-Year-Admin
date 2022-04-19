@@ -7,7 +7,7 @@
 #### 演示网址
 [http://lyear.itshubao.com/iframe/v4](http://lyear.itshubao.com/iframe/v4)
 
-[https://lyear.southwan.cn/V4/iframe](https://lyear.southwan.cn/V4/iframe)
+[https://lyear.southwan.cn/V4/iframe](https://lyear.southwan.cn/v4/iframe)
 
 最新的版本，已经有小伙伴改成蓝色和圆角的样式了，这里演示网站暂未更新（有空我会弄一个新的地址）。
 
