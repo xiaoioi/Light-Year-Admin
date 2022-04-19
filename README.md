@@ -1,7 +1,13 @@
-# Light Year Admin Using Iframe v4 光年后台模板基于Bootstrap 4.4.1的iframe版本 <style版本>
+# Light Year Admin Using Iframe v4 光年后台模板基于Bootstrap 4.4.1的iframe版本
+
+#### 更新说明
+
+[更新记录说明](UPDATE.md)
 
 #### 演示网址
 [http://lyear.itshubao.com/iframe/v4](http://lyear.itshubao.com/iframe/v4)
+
+[https://lyear.southwan.cn/V4/iframe](https://lyear.southwan.cn/V4/iframe)
 
 最新的版本，已经有小伙伴改成蓝色和圆角的样式了，这里演示网站暂未更新（有空我会弄一个新的地址）。
 
